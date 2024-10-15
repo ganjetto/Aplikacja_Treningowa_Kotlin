@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:id="@+id/add_workout_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dividerColor"
+            android:hint="Nazwa treningu"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="@color/textColorSecondary" />
+
+        <EditText
+            android:id="@+id/edit_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/dividerColor"
+            android:hint="Opis treningu"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="@color/textColorSecondary" />
+
+        <Button
+            android:id="@+id/button_add_workout"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/highlightColor"
+            android:text="Dodaj trening" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_workout_layout"
+        android:layout_marginTop="16dp"
+        android:text="Moje treningi"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="378dp"
+        android:layout_height="443dp"
+        android:layout_below="@id/add_workout_layout"
+        android:layout_marginTop="63dp"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="1dp" />
+</RelativeLayout>

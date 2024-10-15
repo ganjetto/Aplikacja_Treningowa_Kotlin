@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/add_exercise_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edit_text_exercise_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nazwa ćwiczenia" />
+
+        <EditText
+            android:id="@+id/edit_text_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Czas trwania (s)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edit_text_sets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Serie"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edit_text_repetitions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Powtórzenia"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button_add_exercise"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dodaj ćwiczenie" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_my_workouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_exercise_layout"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Exercises in this workout"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exercises_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_exercise_layout"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
